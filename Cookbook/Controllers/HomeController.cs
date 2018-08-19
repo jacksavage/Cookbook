@@ -12,25 +12,14 @@ namespace Cookbook.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            // todo get all recipes and pass to the view
+            var recipes = new List<Recipe>();
+            return View(recipes);
         }
 
-        public IActionResult About()
+        public IActionResult Recipe(int id)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
+            // todo get one recipe and pass it to view
             return View();
         }
 
