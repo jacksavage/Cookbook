@@ -7,20 +7,12 @@
 </head>
 <body>
     <main>
-        <h1>@ViewData["Title"]</h1>
         @RenderBody()
     </main>
-    <nav>
-        <h2>cookbook</h2>
-        <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/recipe">favorites</a></li>
-            <li><a href="/">tags</a></li>
-        </ul>
-    </nav>
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.shoelace.style/1.0.0-beta24/shoelace.js"></script>
     @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.shoelace.style/1.0.0-beta24/shoelace.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+﻿@model Cookbook.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe";
+}
+
+<div class="recipe-view">
+    <div class="recipe-view-header">
+        <h2>@Model.Title</h2>
+        <h5>@Model.Author</h5>
+        <p>@Model.Description</p>
+    </div>
+    <div class="recipe-view-ingredients">
+        <h4>Ingredients</h4>
+        <ul>
+            @foreach (var ingredient in Model.Ingredients)
+            {
+                <li>@ingredient.Name</li>
+            }
+        </ul>
+    </div>
+    <div class="recipe-view-directions">
+        <h4>Directions</h4>
+        <ol>
+            @foreach (var direction in Model.Directions.OrderBy(d => d.Order))
+            {
+                <li>@direction.Content</li>
+            }
+        </ol>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

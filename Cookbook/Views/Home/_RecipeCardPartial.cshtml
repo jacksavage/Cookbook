@@ -1,0 +1,9 @@
+﻿@model Cookbook.Models.Recipe
+
+<div class="container">
+    <img src="https://aht.seriouseats.com/assets_c/2013/07/20130723-bacon-weave-food-lab-burger-step-by-step-26-thumb-625xauto-342462.jpg"/>
+    <div class="content">
+        <h2><a asp-action="Recipe" asp-route-id="@Model.ID">@Model.Title</a></h2>
+        <p>@Model.Description</p>
+    </div>
+</div>
